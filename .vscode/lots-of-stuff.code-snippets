@@ -1,0 +1,14 @@
+{
+  "Create a page": {
+    "prefix": "page",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export default function $1() {",
+      "  return (",
+      "    <h1>$2</h1>",
+      "  )",
+      "}"
+    ]
+  }
+}
