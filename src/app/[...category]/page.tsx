@@ -40,10 +40,10 @@ export default function ProductCategoryPage({ params }: ProductCategoryPageParam
     .flat()
 
   useEffect(() => {
-    if (fetchingProducts === 'success' && !products || products?.length === 0 && !queryParams.maxPrice && !queryParams.minPrice) {
+    if (fetchingProducts === 'success' && !products || products?.length === 0 && !queryParams.maxPrice && !queryParams.minPrice && !queryParams.brand) {
       notFound()
     }
-  }, [fetchingProducts, products, queryParams.maxPrice, queryParams.minPrice])
+  }, [fetchingProducts, products, queryParams.brand, queryParams.maxPrice, queryParams.minPrice])
 
 
   return (

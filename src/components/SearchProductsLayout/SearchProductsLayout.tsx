@@ -58,7 +58,7 @@ const SearchProductsLayout = ({ showSearchQuery = false, breadcrumbs, filters = 
 
       {fetchingProducts === 'success' && searchResults && products && (
         <>
-          {showSearchQuery && queryParams.search && searchResults && searchResults.data.length === 0 && (
+          {showSearchQuery && queryParams.search && Object.values(queryParams).length === 1 && searchResults && searchResults.data.length === 0 && (
             <p className='text-center'>
               😥
               <br />
@@ -74,7 +74,7 @@ const SearchProductsLayout = ({ showSearchQuery = false, breadcrumbs, filters = 
           )}
 
           {
-            ((showSearchQuery && queryParams.search && searchResults && searchResults.data.length !== 0) || !showSearchQuery) && (
+            ((showSearchQuery && queryParams.search && searchResults) || !showSearchQuery) && (
               <>
                 <div className='space-y-6'>
                   {breadcrumbs?.slugs && <Breadcrumbs slugs={breadcrumbs.slugs} />}
@@ -108,7 +108,7 @@ const SearchProductsLayout = ({ showSearchQuery = false, breadcrumbs, filters = 
                   </div>
                 </div>
 
-                {!showSearchQuery && searchResults.data.length === 0 && (
+                {searchResults.data.length === 0 && (
                   <p className='text-center'>
                     😥
                     <br />
