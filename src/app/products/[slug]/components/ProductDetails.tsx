@@ -13,7 +13,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
   return (
     <div className="col-span-5 xl:col-span-6 flex flex-col">
       <div>
-        <h1 className="font-medium text-3xl">{product.productName}</h1>
+        <h2 className="font-medium text-3xl">{product.productName}</h2>
         <p className="font-medium text-gray-300">{product.brand}</p>
 
         <p className='py-6'>{product.description}</p>
