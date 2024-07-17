@@ -1,3 +1,5 @@
+'use client'
+
 import Button from '@/components/Button'
 import { useSearchProductsQueryParamsContext } from '@/contexts/useSearchProductsQueryParamsContext'
 import React, { useEffect, useState } from 'react'

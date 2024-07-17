@@ -1,3 +1,5 @@
+'use client'
+
 import React, { forwardRef, Ref, RefObject } from 'react'
 import { Sidebar, SidebarListItem } from '@/components'
 import { SidebarComponent } from '@/components/Sidebar/Sidebar'

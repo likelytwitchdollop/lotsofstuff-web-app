@@ -1,3 +1,5 @@
+'use client'
+
 import { useSearchProductsQueryParamsContext } from '@/contexts/useSearchProductsQueryParamsContext'
 
 const useSearchProductsFilters = () => {
